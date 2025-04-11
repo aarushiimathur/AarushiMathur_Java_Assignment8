@@ -22,3 +22,6 @@ class Main {
                         float cgpa = Float.parseFloat(scan.nextLine());
                         operations.addStudent(new Student(name, prn, batch, cgpa));
                         break;
+                    case 2:
+                        operations.displayStudents();
+                        break;
