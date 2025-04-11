@@ -35,3 +35,17 @@ class StudentOperations {
         }
         throw new StudentNotFoundException("Student with PRN " + prn + " not found.");
     }
+
+    public void updateStudent(int prn, String newName, String newBatch, float newCGPA)
+            throws StudentNotFoundException, UpdateFailedException {
+        for (Student student : students) {
+            if (student.getPRN() == prn) {
+                student.setName(newName);
+                student.setBatch(newBatch);
+                student.setCGPA(newCGPA);
+                System.out.println("Student updated successfully.");
+                return;
+            }
+        }
+        throw new UpdateFailedException("Update failed: Student with PRN " + prn + " not found.");
+    
