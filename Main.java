@@ -37,6 +37,11 @@ class Main {
                         String newName = scan.nextLine();
                         System.out.print("Enter New Batch: ");
                         String newBatch = scan.nextLine();
+                    case 5:
+                        System.out.print("Enter PRN to delete: ");
+                        int deletePrn = Integer.parseInt(scan.nextLine());
+                        operations.deleteStudent(deletePrn);
+                        break;
                         System.out.print("Enter New CGPA: ");
                         float newCGPA = Float.parseFloat(scan.nextLine());
                         operations.updateStudent(updatePrn, newName, newBatch, newCGPA);
