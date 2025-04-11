@@ -16,3 +16,11 @@ class StudentOperations {
         students.add(student);
         System.out.println("Student added.");
     }
+    
+    public void displayStudents() throws StudentArrayEmptyException {
+        if (students.isEmpty()) throw new StudentArrayEmptyException("No students to display.");
+
+        for (Student student : students) {
+            student.display();
+        }
+    }
