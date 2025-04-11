@@ -49,3 +49,12 @@ class Main {
                     case 6:
                         System.out.println("Exiting...");
                         break;
+                    default:
+                        System.out.println("Invalid choice! Try again.");
+                }
+            } catch (Exception e) {
+                System.out.println("Error: " + e.getMessage());
+            }
+        } while (choice != 6);
+    }
+}
