@@ -30,3 +30,14 @@ class Main {
                         int searchPrn = Integer.parseInt(scan.nextLine());
                         operations.searchByPRN(searchPrn);
                         break;
+                    case 4:
+                        System.out.print("Enter PRN to update: ");
+                        int updatePrn = Integer.parseInt(scan.nextLine());
+                        System.out.print("Enter New Name: ");
+                        String newName = scan.nextLine();
+                        System.out.print("Enter New Batch: ");
+                        String newBatch = scan.nextLine();
+                        System.out.print("Enter New CGPA: ");
+                        float newCGPA = Float.parseFloat(scan.nextLine());
+                        operations.updateStudent(updatePrn, newName, newBatch, newCGPA);
+                        break;
