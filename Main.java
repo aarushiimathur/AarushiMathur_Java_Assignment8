@@ -25,3 +25,8 @@ class Main {
                     case 2:
                         operations.displayStudents();
                         break;
+                    case 3:
+                        System.out.print("Enter PRN to search: ");
+                        int searchPrn = Integer.parseInt(scan.nextLine());
+                        operations.searchByPRN(searchPrn);
+                        break;
