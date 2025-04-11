@@ -24,3 +24,14 @@ class StudentOperations {
             student.display();
         }
     }
+    public void searchByPRN(int prn) throws InvalidPRNException, StudentNotFoundException {
+        if (prn <= 0) throw new InvalidPRNException("Invalid PRN entered.");
+
+        for (Student student : students) {
+            if (student.getPRN() == prn) {
+                student.display();
+                return;
+            }
+        }
+        throw new StudentNotFoundException("Student with PRN " + prn + " not found.");
+    }
