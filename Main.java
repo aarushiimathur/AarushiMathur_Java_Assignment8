@@ -46,3 +46,6 @@ class Main {
                         float newCGPA = Float.parseFloat(scan.nextLine());
                         operations.updateStudent(updatePrn, newName, newBatch, newCGPA);
                         break;
+                    case 6:
+                        System.out.println("Exiting...");
+                        break;
