@@ -48,4 +48,14 @@ class StudentOperations {
             }
         }
         throw new UpdateFailedException("Update failed: Student with PRN " + prn + " not found.");
-    
+        public void deleteStudent(int prn) throws StudentNotFoundException, DeleteFailedException {
+        for (int i = 0; i < students.size(); i++) {
+            if (students.get(i).getPRN() == prn) {
+                students.remove(i);
+                System.out.println("Student deleted successfully.");
+                return;
+            }
+        }
+        throw new DeleteFailedException("Delete failed: Student with PRN " + prn + " not found.");
+    }
+}
